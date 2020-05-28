@@ -26,4 +26,40 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
 
 
 
+## User Stories
+
+
+
+## Visual Style
+
+![](./images/insp1.png)
+
+[User Profile from Nick Lewis on CodePen](https://codepen.io/nickylew/pen/QpaYLX)
+
+![](./images/insp2.png)
+
+[User Profile from Angela Yun He on CodePen](https://codepen.io/zephyo/pen/maregg)
+
+![](./images/insp3.png)
+
+[UI Design Daily | User Profile](https://uidesigndaily.com/posts/photoshop-user-profile-gallery-day-6)
+
+
+
+## Tools
+
+- [Chart.js | Open source HTML5 Charts for your website](https://www.chartjs.org/)
+
+- 
+
+
+
+### Strech Goals
+
+- Social media integration 
+  
+  - Twitter API 
+  
+  - FB API 
+
 
