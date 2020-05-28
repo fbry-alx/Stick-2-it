@@ -20,4 +20,10 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
 
 
 
+### Site Map
+
+![](./images/sitemap.png)
+
+
+
 
