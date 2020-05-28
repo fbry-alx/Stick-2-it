@@ -10,6 +10,14 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
 
 ![](./images/profile.png)
 
+### Habit Index
+
+![](./images/habitIndex.png)
+
+### Activty info page
+
+![](./images/activityShow.png)
+
 ### ERD
 
 ![](./images/erd.png)
@@ -21,6 +29,10 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
 ## User Stories
 
 ## Visual Style
+
+We want a minimalist/modern style to our page, with rounded edges, soft limited colors, and sans serif fonts. Below are some visual inspirations for the various parts of our app. 
+
+#### User Profile
 
 ![](./images/insp1.png)
 
@@ -34,11 +46,13 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
 
 [UI Design Daily | User Profile](https://uidesigndaily.com/posts/photoshop-user-profile-gallery-day-6)
 
+
+
 ## Tools
 
 - [Chart.js | Open source HTML5 Charts for your website](https://www.chartjs.org/)
-
-- 
+  
+  
 
 ### Strech Goals
 
