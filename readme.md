@@ -6,29 +6,19 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
 
 ![](./images/home.png)
 
-
-
 ### User Profile
 
 ![](./images/profile.png)
-
-
 
 ### ERD
 
 ![](./images/erd.png)
 
-
-
 ### Site Map
 
-![](./images/sitemap.png)
-
-
+![sitemap.png](./images/sitemap.png)
 
 ## User Stories
-
-
 
 ## Visual Style
 
@@ -44,15 +34,11 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
 
 [UI Design Daily | User Profile](https://uidesigndaily.com/posts/photoshop-user-profile-gallery-day-6)
 
-
-
 ## Tools
 
 - [Chart.js | Open source HTML5 Charts for your website](https://www.chartjs.org/)
 
 - 
-
-
 
 ### Strech Goals
 
@@ -61,5 +47,3 @@ Our idea is a habit tracker app. Each user will be able to log in, and set which
   - Twitter API 
   
   - FB API 
-
-
