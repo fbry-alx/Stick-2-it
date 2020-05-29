@@ -22,9 +22,13 @@ Our idea is a habit tracker app called Stick-2-It. Each user will be able to log
 
 ![](./images/erd.png)
 
-### Site Map
+### Site Map v1
 
 ![sitemap.png](./images/sitemap.png)
+
+### Site Map v2
+
+![](./images/sitemap2.png)
 
 ## User Stories
 
@@ -74,7 +78,7 @@ Fabry put some time into making some mock ups in Figma that refelect what we are
 
 ## Tools
 
-- [Chart.js | Open source HTML5 Charts for your website](https://www.chartjs.org/)
+- MEN stack 
 
 ### Strech Goals
 
@@ -83,3 +87,7 @@ Fabry put some time into making some mock ups in Figma that refelect what we are
   - Twitter API 
   
   - FB API 
+
+- [Chart.js | Open source HTML5 Charts for your website](https://www.chartjs.org/)
+
+- 
