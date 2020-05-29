@@ -1,0 +1,26 @@
+{
+  "name": "stick-2-it",
+  "version": "1.0.0",
+  "description": "Our idea is a habit tracker app called Stick-2-It. Each user will be able to log in, and set which habits they want to work on. Each habit will have a name and a frequency, whether the user want to work on it once, twice, three times per week, etc. The user will then be able to log each activity/task they did for each habit they are tracking. The activity/task will have a name, duration, and any notes the user wants to add about their activity.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.generalassemb.ly:sharpez/Project-1.git"
+  },
+  "author": "Fabry and Zach",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-mongo": "^3.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.16"
+  }
+}
