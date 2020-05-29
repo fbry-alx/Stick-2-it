@@ -28,6 +28,8 @@ Our idea is a habit tracker app called Stick-2-It. Each user will be able to log
 
 ## User Stories
 
+User will arrive at our landing page, and be able to login to their Stick-2-It account. Once they login they will be able to add any number of habits they want to track to their account. Once they have added their habits, they can then log each activity they've done and create a log of each activity within each habit. Then the app will collect data and show stats on the users profile page with the average duration, number of times each week etc. The user can add, modify, and delete any habit. If the user deletes a habit, that will also delete the log of activities the user did for that habit. The user can also edit their profile information. 
+
 ## Visual Style
 
 We want a minimalist/modern style to our page, with rounded edges, soft limited colors, and sans serif fonts. Below are some visual inspirations for the various parts of our app. 
