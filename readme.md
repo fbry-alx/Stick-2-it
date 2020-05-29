@@ -30,6 +30,22 @@ Our idea is a habit tracker app called Stick-2-It. Each user will be able to log
 
 ![](./images/sitemap2.png)
 
+#### 7 Total Pages
+
+- Landing page 
+
+- login/account create 
+
+- User Profile 
+
+- Habit Index Page 
+
+- Activity Show Page 
+
+- habit Create 
+
+- Activity Create
+
 ## User Stories
 
 User will arrive at our landing page, and be able to login to their Stick-2-It account. Once they login they will be able to add any number of habits they want to track to their account, the user can also edit their profile information. 
