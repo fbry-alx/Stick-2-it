@@ -23,6 +23,7 @@ router.post('/register', async (req, res) => {
     const newUser = await db.User.create(req.body);
     res.redirect('/login');
   } catch (err) {
+    console.log(err);
     res.send({ message: 'Internal Server Error' })
   }
 })
@@ -48,7 +49,8 @@ router.post('/login', async (req, res) => {
       username: foundUser.username,
     }
     res.redirect('/profile');
-  } catch {
+  } catch (err) {
+    console.log(err);
     res.send({ message: 'Internal Server Error' })
   }
 });
