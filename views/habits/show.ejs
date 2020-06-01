@@ -12,6 +12,7 @@
   <p>I am working on <%=habit.name%></p>
   <p>I am doing it <%=habit.frequency%> times per week</p>
   <h3>Here are my entries</h3>
+  <a href="/activities/new">Log an activity</a>
   <% if (!habit.log.length) { %>
   <p>No recorded habits yet, get out there!</p>
   <% } %>
