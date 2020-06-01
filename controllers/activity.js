@@ -4,18 +4,18 @@ const router = express.Router();
 const db = require('../models');
 
 /* Index */
-router.get('/', (req, res) => {
-  res.send('/activity');
-});
+/* router.get('/', (req, res) => {
+  res.send();
+}); */
 
 /* New */
 router.get('/new', (req, res) => {
-  res.send('/activity/new');
+  res.render('activities/new');
 });
 
 /* Show */
 router.get('/:id', (req, res) => {
-  res.send('/activity/:id');
+  res.render('activities/show');
 });
 
 
@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
 
 /* Edit */
 router.get('/:id/edit', (req, res) => {
-  res.send('/activity/:id/edit');
+  res.render('activities/edit');
 });
 
 /* Update */
