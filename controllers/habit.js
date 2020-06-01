@@ -5,7 +5,7 @@ const db = require('../models');
 
 /* Index */
 router.get('/', (req, res) => {
-  db.Habit.find({}, (err, allHabits) => {
+  db.User.findBy({}, (err, allHabits) => {
     if (err) {
       res.send({ message: 'Internal Server Error' });
     } else {
