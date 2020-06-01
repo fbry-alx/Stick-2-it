@@ -5,17 +5,17 @@ const db = require('../models');
 
 /* Index */
 router.get('/', (req, res) => {
-  res.send('/habit');
+  res.render('habits/index');
 });
 
 /* New */
 router.get('/new', (req, res) => {
-  res.send('/habit/new');
+  res.render('habits/new');
 });
 
 /* Show */
 router.get('/:id', (req, res) => {
-  res.send('/habit/:id');
+  res.render('habits/show');
 });
 
 
@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
 
 /* Edit */
 router.get('/:id/edit', (req, res) => {
-  res.send('/habit/:id/edit');
+  res.render('habits/edit');
 });
 
 /* Update */
