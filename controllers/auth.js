@@ -59,7 +59,6 @@ router.delete('/logout', async (req, res) => {
   res.redirect('/login');
 })
 
-
 /* Profile */
 router.get('/profile', async (req, res) => {
   try {
