@@ -1,4 +1,5 @@
 module.exports = {
   habit: require('./habit'),
-  activity: require('./activity')
+  activity: require('./activity'),
+  auth: require('./auth')
 };

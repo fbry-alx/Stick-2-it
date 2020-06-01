@@ -16,6 +16,8 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
+app.use('/', controllers.auth);
+
 
 app.use('/habit', controllers.habit);
 app.use('/activity', controllers.activity);

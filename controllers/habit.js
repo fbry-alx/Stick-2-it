@@ -18,7 +18,6 @@ router.get('/:id', (req, res) => {
   res.render('habits/show');
 });
 
-
 /* Create */
 router.post('/', (req, res) => {
   res.send('/habit');
