@@ -34,8 +34,8 @@ app.get('/', (req, res) => {
 app.use('/', controllers.auth);
 
 
-app.use('/habits', controllers.habit);
-app.use('/activities', controllers.activity);
+app.use('/habits', authRequired, controllers.habit);
+app.use('/activities', authRequired, controllers.activity);
 
 
 app.listen(PORT, () => {
