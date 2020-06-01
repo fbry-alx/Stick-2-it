@@ -13,10 +13,15 @@ app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', (req, res) => {
-  res.send('hello!');
+  res.render('index');
 })
+
+
+app.use('/habit', controllers.habit);
+app.use('/activity', controllers.activity);
 
 
 app.listen(PORT, () => {
   console.log(`Server started and listening on port ${PORT}`);
 })
+
