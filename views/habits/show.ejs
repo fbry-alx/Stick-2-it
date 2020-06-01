@@ -9,6 +9,18 @@
 
 <body>
   <h1>Here is one of my habits!</h1>
+  <p>I am working on <%=habit.name%></p>
+  <p>I am doing it <%=habit.frequency%> times per week</p>
+  <h3>Here are my entries</h3>
+  <% if (!habit.log.length) { %>
+  <p>No recorded habits yet, get out there!</p>
+  <% } %>
+  <% habit.log.forEach(activity => { %>
+  <h4><a href="/activities/<%=activity._id%>"><%=activity.name%></a></h4>
+  <p><%=activity.duration%></p>
+  <p><%=activity.notes%></p>
+  <% }) %>
+
 </body>
 
 </html>

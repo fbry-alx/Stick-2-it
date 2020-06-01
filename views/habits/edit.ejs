@@ -10,5 +10,10 @@
 <body>
   <h1>Edit habit info</h1>
 </body>
+<form action="/habits/<%=habit._id%>?_method=PUT" method='POST'>
+  <p>Name: <input type="text" name='name' placeholder="<%=habit.name%>" required></p>
+  <p>Frequency: <input type='number' name='frequency' placeholder="<%=habit.frequency%>" required></p>
+  <input type="submit" value="Update Habit">
+</form>
 
 </html>
