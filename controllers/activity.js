@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
 
 /* Create */
 router.post('/', (req, res) => {
-  res.send('/activity');
+  res.send('/activities');
 });
 
 /* Edit */
@@ -31,12 +31,12 @@ router.get('/:id/edit', (req, res) => {
 
 /* Update */
 router.put('/:id', (req, res) => {
-  res.send('/activity/:id');
+  res.send('/activities/:id');
 });
 
 /* Delete */
 router.delete('/:id', (req, res) => {
-  res.send('/activity');
+  res.send('/activities');
 });
 
 
