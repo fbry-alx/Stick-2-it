@@ -9,19 +9,24 @@ const db = require('../models');
 }); */
 
 /* New */
-router.get('/new', (req, res) => {
+router.get('/new', async (req, res) => {
   res.render('activities/new');
 });
 
 /* Show */
-router.get('/:id', (req, res) => {
-  res.render('activities/show');
+router.get('/:id', async (req, res) => {
+  try {
+    const foundActivity = await db.Activity.findById(req.params.id)
+    const context = { activity: foundActivity }
+    res.render('activities/show', context);
+  } catch (err) {
+    res.send('Internal Server Error');
+  }
 });
 
-
 /* Create */
-router.post('/', (req, res) => {
-  res.send('/activities');
+router.post('/', async (req, res) => {
+  res.render('/activities');
 });
 
 /* Edit */
