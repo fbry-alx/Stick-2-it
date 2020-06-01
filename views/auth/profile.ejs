@@ -8,8 +8,18 @@
 </head>
 
 <body>
-  <h1>Here is <%=user.username%>'s Profile</h1>
+  <h1><%=user.username%>'s Profile</h1>
   <p>Email: <%=user.email%></p>
+  <% if (!user.habits.length) { %>
+  <h3>You aren't tracking any habits yet</h3>
+  <% } else { %>
+  <h3>Here are my habits</h3>
+  <ul>
+    <% user.habits.forEach(habit => { %>
+    <li><%=habit.name%></li>
+    <% }) %>
+  </ul>
+  <%}%>
 </body>
 
 </html>
