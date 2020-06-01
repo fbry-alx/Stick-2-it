@@ -17,7 +17,6 @@ router.post('/register', async (req, res) => {
     if (foundUser) {
       res.send({ message: 'Email is already in use' });
     }
-    console.log(req.body);
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(req.body.password, salt);
     req.body.password = hash;
@@ -41,7 +40,6 @@ router.post('/login', async (req, res) => {
     if (!foundUser) {
       res.send({ message: 'Password or Email in incorrect.' });
     }
-    console.log(req.body);
     const match = await bcrypt.compare(req.body.password, foundUser.password);
     if (!match) {
       res.send({ message: 'Password or Email in incorrect.' });
@@ -68,7 +66,6 @@ router.delete('/logout', async (req, res) => {
 router.get('/profile', async (req, res) => {
   try {
     const foundUser = await db.User.findById(req.session.currentUser.id);
-    console.log(foundUser);
     res.render('auth/profile', { user: foundUser })
   } catch {
     res.send({ message: 'Internal Server Error' })

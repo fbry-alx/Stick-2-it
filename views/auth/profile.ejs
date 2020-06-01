@@ -16,7 +16,7 @@
   <h3>Here are my habits</h3>
   <ul>
     <% user.habits.forEach(habit => { %>
-    <li><%=habit.name%></li>
+    <li><a href="/habits/<%=habit._id%>"><%=habit.name%></a></li>
     <% }) %>
   </ul>
   <%}%>
