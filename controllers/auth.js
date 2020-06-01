@@ -64,7 +64,7 @@ router.delete('/logout', async (req, res) => {
 /* Profile */
 router.get('/profile', async (req, res) => {
   try {
-    const foundUser = await db.User.findById(req.session.currentUser.id);
+    const foundUser = await db.User.findById(req.session.currentUser.id).populate('habits');
     res.render('auth/profile', { user: foundUser })
   } catch {
     res.send({ message: 'Internal Server Error' })
