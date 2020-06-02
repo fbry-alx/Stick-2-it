@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('/img/tying-shoe.jpg') no-repeat center/cover;
+  height: 100vh;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.logo {
+  padding: 2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  padding: 1rem 2rem; 
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+  border-bottom: 3px transparent solid;
+  color: #001F3C;
+}
+
+.main-nav a:hover {
+  border-color: #001F3C;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
