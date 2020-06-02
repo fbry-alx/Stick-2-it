@@ -14,6 +14,7 @@ const app = express();
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(__dirname + '/public'));
 
 app.use(session({
   store: new MongoStore({
@@ -32,11 +33,8 @@ app.get('/', (req, res) => {
 })
 
 app.use('/', controllers.auth);
-
-
 app.use('/habits', authRequired, controllers.habit);
 app.use('/activities', authRequired, controllers.activity);
-
 
 app.listen(PORT, () => {
   console.log(`Server started and listening on port ${PORT}`);
