@@ -11,6 +11,7 @@
 body {
   background: url('/img/tying-shoe.jpg') no-repeat center/cover;
   height: 100vh;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   color: #fff;
 }
@@ -50,7 +51,6 @@ body {
 }
 
 .container {
-  max-width: 1800px;
   margin: 0 10px;
 }
 
@@ -98,3 +98,77 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/* Login */
+.sign-in {
+  background: rgba(0,31,60,0.5);
+  width: 320px;
+  height: 420px;
+  padding: 2.5rem;
+  margin: auto;
+  position: relative;
+  left: 25%;
+  top: 15%;
+  border-radius: 10px;
+}
+
+.login-form {
+  width: 240px;
+  text-align: center;
+}
+
+input[type=text],
+input[type=password] {
+  background: transparent;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 240px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 10px 0;
+  transition: border 0.5s;
+  outline: none;
+  color: #fff;
+}
+
+input[type=submit] {
+  border: none;
+  width: 190px;
+  background: #fff;
+  color: #001f3c;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+input[type=submit]:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.reset-forgot{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.reset-forgot>a:hover{
+  color: #87A973;
+}
+
+.sign-up-btn:hover {
+  color: #87A973;
+}
+
+::placeholder{
+  color: aliceblue;
+  opacity: 0.8;
+} 
