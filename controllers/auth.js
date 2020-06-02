@@ -38,11 +38,11 @@ router.post('/login', async (req, res) => {
   try {
     const foundUser = await db.User.findOne({ email: req.body.email });
     if (!foundUser) {
-      res.send({ message: 'Password or Email in incorrect.' });
+      res.send({ message: 'Password or Email is incorrect.' });
     }
     const match = await bcrypt.compare(req.body.password, foundUser.password);
     if (!match) {
-      res.send({ message: 'Password or Email in incorrect.' });
+      res.send({ message: 'Password or Email is incorrect.' });
     }
     req.session.currentUser = {
       id: foundUser._id,
