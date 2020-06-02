@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
     res.redirect(`/habits/${req.params.id}`);
   } catch (err) {
     console.log(err);
-    res.send('internal server errror');
+    res.send('internal server error');
   }
 });
 
