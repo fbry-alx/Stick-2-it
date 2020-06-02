@@ -10,7 +10,13 @@ const db = require('../models');
 
 /* New */
 router.get('/new', async (req, res) => {
-  res.render('activities/new');
+  try {
+    const currentUser = await db.User.findById(req.session.currentUser.id).populate('habits');
+    res.render('activities/new', { habits: currentUser.habits });
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error');
+  }
 });
 
 /* Show */
