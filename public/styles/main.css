@@ -50,9 +50,10 @@ body {
   align-items: center;
 }
 
-.container {
+/* .container {
+  max-width: 1800px;
   margin: 0 10px;
-}
+} */
 
 /* home main section */
 .home-main{
@@ -106,7 +107,7 @@ body {
   padding: 2.5rem;
   margin: auto;
   position: relative;
-  left: 25%;
+  left: 28%;
   top: 15%;
   border-radius: 10px;
 }
@@ -116,8 +117,13 @@ body {
   text-align: center;
 }
 
+.login-form>h2 {
+  padding-bottom: 0.5rem;
+}
+
 input[type=text],
-input[type=password] {
+input[type=password],
+input[type=email] {
   background: transparent;
   text-align: center;
   border: none;
@@ -129,6 +135,7 @@ input[type=password] {
   transition: border 0.5s;
   outline: none;
   color: #fff;
+  line-height: 1.7rem;
 }
 
 input[type=submit] {
@@ -172,3 +179,26 @@ a {
   color: aliceblue;
   opacity: 0.8;
 } 
+
+/* Register */
+.sign-up {
+  background: rgba(0,31,60,0.5);
+  width: 320px;
+  height: 420px;
+  padding: 2.5rem;
+  margin: auto;
+  position: relative;
+  left: 28%;
+  top: 15%;
+  border-radius: 10px;
+}
+
+
+.register-form {
+  width: 240px;
+  text-align: center;
+}
+
+.register-form>h2 {
+  padding-bottom: 0.5rem;
+}
