@@ -36,7 +36,7 @@ router.get('/login', (req, res) => {
 /* Login Post */
 router.post('/login', async (req, res) => {
   try {
-    const foundUser = await db.User.findOne({ email: req.body.email });
+    const foundUser = await db.User.findOne({ username: req.body.username });
     if (!foundUser) {
       res.send({ message: 'Password or Email is incorrect.' });
     }
