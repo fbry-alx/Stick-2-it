@@ -19,6 +19,7 @@ body {
   padding: 2rem;
 }
 
+/* Nav bar */
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -53,6 +54,7 @@ body {
   margin: 0 10px;
 }
 
+/* home main section */
 .home-main{
   display: flex;
   flex-direction: column;
@@ -95,3 +97,4 @@ body {
 .join-btn:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
