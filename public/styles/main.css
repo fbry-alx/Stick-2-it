@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('/img/tying-shoe.jpg') no-repeat center/cover;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.logo {
+  padding: 2rem;
+}
+
+/* Nav bar */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  padding: 1rem 2rem; 
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+  border-bottom: 3px transparent solid;
+  color: #001F3C;
+}
+
+.main-nav a:hover {
+  border-color: #001F3C;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .container {
+  max-width: 1800px;
+  margin: 0 10px;
+} */
+
+/* home main section */
+.home-main{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 3.25rem;
+  margin-bottom: 0.75rem;
+  position: relative;
+  right: 5rem;
+  color: #001F3C;
+}
+
+.subtitle {
+  display: inline-block;
+  font-size: 1.25rem;
+  width: 450px;
+  position: relative;
+  right: 8rem;
+  color: #fff;
+}
+
+.join-btn {
+ text-decoration: none;
+ background-color: #001F3C;
+ color: #fff;
+ padding: .75rem 1.5rem;
+ border-radius: .5rem;
+ font-size: .9rem;
+ position: relative;
+ top: 1.5rem;
+ right: 18rem;
+}
+
+.join-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Login */
+.sign-in {
+  background: rgba(0,31,60,0.5);
+  width: 320px;
+  height: 420px;
+  padding: 2.5rem;
+  margin: auto;
+  position: relative;
+  left: 28%;
+  top: 15%;
+  border-radius: 10px;
+}
+
+.login-form {
+  width: 240px;
+  text-align: center;
+}
+
+.login-form>h2 {
+  padding-bottom: 0.5rem;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  background: transparent;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 240px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 10px 0;
+  transition: border 0.5s;
+  outline: none;
+  color: #fff;
+  line-height: 1.7rem;
+}
+
+input[type=submit] {
+  border: none;
+  width: 190px;
+  background: #fff;
+  color: #001f3c;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+input[type=submit]:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.reset-forgot{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.reset-forgot>a:hover{
+  color: #87A973;
+}
+
+.sign-up-btn:hover {
+  color: #87A973;
+}
+
+::placeholder{
+  color: aliceblue;
+  opacity: 0.8;
+} 
+
+/* Register */
+.sign-up {
+  background: rgba(0,31,60,0.5);
+  width: 320px;
+  height: 420px;
+  padding: 2.5rem;
+  margin: auto;
+  position: relative;
+  left: 28%;
+  top: 15%;
+  border-radius: 10px;
+}
+
+
+.register-form {
+  width: 240px;
+  text-align: center;
+}
+
+.register-form>h2 {
+  padding-bottom: 0.5rem;
+}
