@@ -9,11 +9,21 @@
 
 <body>
   <h1>Login Page</h1>
-  <form action="/login" method="post">
-    <p>Email: <input type="email" name='email' required></p>
-    <p>Password: <input type="password" name='password' required></p>
-    <input type="submit" value="Login">
-  </form>
+  <div class="sign-in">
+    <form class="form" action="/login" method="post">
+      <input type="text" name="username" placeholder="Username" autocomplete="off" required>
+      <input type="password" name="password" placeholder="Password" autocomplete="off" required>
+      <input type="submit" value="Login">
+      <br><br>
+      <div class="reset-forgot">
+        <a href="#" style="margin-right: 0px; font-size: 13px;">Reset Password</a>&nbsp&nbsp
+        <a href="#" style="margin-right: 0px; font-size: 13px;">Forgot Password</a>
+      </div>
+      <br><br><br><br>
+      Don't have an account? <a href="/register">&nbsp; Sign Up</a>
+    </form>
+  </div>
+
 </body>
 
 </html>
