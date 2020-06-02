@@ -32,7 +32,21 @@ router.get('/:id', async (req, res) => {
 
 /* Create */
 router.post('/', async (req, res) => {
-  res.render('/activities');
+  try {
+    const newActivity = await db.Activity.create({
+      name: req.body.name,
+      duration: req.body.duration,
+      notes: req.body.notes,
+    });
+    const habit = await db.Habit.findById(req.body.habit);
+    habit.log.push(newActivity);
+    habit.save();
+    console.log(req.body);
+    res.redirect(`habits/${req.body.habit}`)
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error')
+  }
 });
 
 /* Edit */
