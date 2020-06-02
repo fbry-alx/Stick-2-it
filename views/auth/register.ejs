@@ -9,11 +9,14 @@
 
 <body>
   <h1>Register Page</h1>
-  <form action="/register" method="post">
-    <p>Username: <input type="text" name='username' required></p>
-    <p>Email: <input type="email" name='email' required></p>
-    <p>Password: <input type="password" name='password' required></p>
-    <input type="submit" value="Register">
+  <form class="sing-up" action="/register" method="post">
+    <h2 style="color: #fff;">Sign Up</h2>
+    <input type="text" name="name" placeholder="First Name" autocomplete="off">
+    <input type="text" name="name" placeholder="Last Name" autocomplete="off">
+    <input type="text" name='username' placeholder="Username" autocomplete="off" required>
+    <input type="email" name='email' placeholder="Email Address" autocomplete="off" required>
+    <input type="password" name="password" placeholder="Password" autocomplete="off">
+    <a href=""><input type="button" value="Sign Up"></a>
   </form>
 </body>
 
