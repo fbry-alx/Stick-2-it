@@ -45,8 +45,18 @@ router.put('/:id', (req, res) => {
 });
 
 /* Delete */
-router.delete('/:id', (req, res) => {
-
+router.delete('/:id', async (req, res) => {
+  try {
+    const deletedHabit = await db.Habit.findByIdAndDelete(req.params.id);
+    const currentUser = await db.User.findById(req.session.currentUser.id).populate('habits');
+    const habitIndex = currentUser.habits.indexOf(deletedHabit._id);
+    currentUser.habits = currentUser.habits.filter(value => value !== habitIndex);
+    currentUser.save();
+    res.redirect('/profile');
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error');
+  }
 });
 
 

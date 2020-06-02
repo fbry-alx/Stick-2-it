@@ -21,6 +21,9 @@
   <p><%=activity.duration%></p>
   <p><%=activity.notes%></p>
   <% }) %>
+  <form action="/habits/<%=habit._id%>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete Habit">
+  </form>
 
 </body>
 
