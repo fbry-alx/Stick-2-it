@@ -11,8 +11,7 @@ const db = require('../models');
 /* New */
 router.get('/new', async (req, res) => {
   try {
-    const currentUser = await db.User.findById(req.session.currentUser.id).populate('habits');
-    res.render('activities/new', { habits: currentUser.habits });
+    res.render('activities/new', { habit: req.habitID });
   } catch (err) {
     console.log(err);
     res.send('internal server error');
@@ -23,7 +22,8 @@ router.get('/new', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const foundActivity = await db.Activity.findById(req.params.id)
-    const context = { activity: foundActivity }
+    const parentHabit = await db.Habit.findById(req.habitID);
+    const context = { activity: foundActivity, habit: req.habitID }
     res.render('activities/show', context);
   } catch (err) {
     res.send('Internal Server Error');
@@ -38,10 +38,10 @@ router.post('/', async (req, res) => {
       duration: req.body.duration,
       notes: req.body.notes,
     });
-    const habit = await db.Habit.findById(req.body.habit);
+    const habit = await db.Habit.findById(req.habitID);
     habit.log.push(newActivity);
     habit.save();
-    res.redirect(`habits/${req.body.habit}`)
+    res.redirect(`/habits/${req.habitID}`)
   } catch (err) {
     console.log(err);
     res.send('internal server error')
@@ -52,7 +52,7 @@ router.post('/', async (req, res) => {
 router.get('/:id/edit', async (req, res) => {
   try {
     const foundActivity = await db.Activity.findById(req.params.id);
-    res.render('activities/edit', { activity: foundActivity });
+    res.render('activities/edit', { activity: foundActivity, habit: req.habitID });
 
   } catch (err) {
 
@@ -63,7 +63,7 @@ router.get('/:id/edit', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const updatedActivity = await db.Activity.findByIdAndUpdate(req.params.id, req.body, { new: true });
-    res.redirect(`/activities/${req.params.id}`);
+    res.redirect(`/habits/${req.habitID}/activities/${req.params.id}`);
   } catch (err) {
     console.log(err);
     res.send('internal server error');
@@ -76,24 +76,15 @@ router.delete('/:id', async (req, res) => {
   //TODO daltons idea of restful routes going to habit controller
   try {
     const deletedActivity = await db.Activity.findByIdAndDelete(req.params.id);
-    const currentUser = await db.User.findById(req.session.currentUser.id).populate('habits');
-    currentUser.habits.forEach(async habit => {
-      let currentHabit = await db.Habit.findById(habit._id).populate(log);
-      currentHabit.log.forEach(async activity => {
-        if (activity._id === deletedActivity._id) {
-          await currentHabit.log.remove(deletedActivity);
-        }
-      })
-    })
-    res.redirect('/profile');
+    const parentHabit = await db.Habit.findById(req.habitID).populate('log');
+    parentHabit.log.remove(deletedActivity);
+    parentHabit.save();
+    res.redirect(`/habits/${req.habitID}`);
   } catch (err) {
     console.log(err);
     res.send('internal server error');
   }
 });
-
-
-
 
 
 
