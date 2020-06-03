@@ -11,7 +11,8 @@ const db = require('../models');
 /* New */
 router.get('/new', async (req, res) => {
   try {
-    res.render('activities/new', { habit: req.habitID });
+    const parentHabit = await db.Habit.findById(req.habitID);
+    res.render('activities/new', { habit: parentHabit });
   } catch (err) {
     console.log(err);
     res.send('internal server error');
