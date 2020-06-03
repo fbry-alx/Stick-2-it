@@ -10,7 +10,7 @@ router.get('/new', async (req, res) => {
 /* Show */
 router.get('/:id', async (req, res) => {
   try {
-    const foundHabit = await db.Habit.findById(req.params.id);
+    const foundHabit = await db.Habit.findById(req.params.id).populate('log');
     const context = { habit: foundHabit };
     res.render('habits/show', context);
   } catch (err) {
