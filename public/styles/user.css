@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: url('/img/hand.jpg') no-repeat center/cover;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: #000;
+  max-width: 1850px;
+}
+
+.logo {
+  padding: 2rem;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  padding: 1rem 2rem; 
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+  border-bottom: 3px transparent solid;
+  color: #001F3C;
+  /* font-weight: 700; */
+}
+
+.main-nav a:hover {
+  border-color: #001f3c;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  /* font-weight: bolder; */
+}
+
+.profile {
+  background: rgb(239, 239, 239, 0.3);
+  /* background: rgb(0, 31, 60, 0.3); */
+  width: 50%;
+  height: 60%;
+  padding: 2.5rem;
+  /* margin: auto; */
+  position: absolute;
+  top: 22%;
+  left: 25%;
+  border-radius: 10px;
+  line-height: 2.5rem;
+  box-shadow: 0 3px 5px #000;
+}
+
+ .profile>img {
+   border-radius: 100px;
+   border: 2px solid #000;
+ }
+
+ .info{
+  color: #4b4fe2;
+  margin-right: 0.5rem;
+}
+
+ /* .habit-bar{
+  background: #bfc9ea;
+  border-radius: 1rem;
+}
+
+.progress-bar{
+  padding: 0.1em 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: #fff;
+  background: #4b4fe2;
+} */
+
+.about-par{
+  display: flex; 
+  flex-direction: column;
+  width: 500px;
+  position: absolute;
+  top: 1.5rem;
+  left: 20rem;
+  line-height: 1.75rem;
+}
+
+.about-title {
+text-align: center;
+font-size: 1.25rem;
+}
+
+.log-out-btn{
+  background-color: #001F3C;
+  color: #fff;
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  font-size: .9rem;
+  margin: 2rem 0;
+  display: none;
+}
+
+.log-out-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
