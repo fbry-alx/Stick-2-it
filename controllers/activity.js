@@ -1,12 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
 const db = require('../models');
-
-/* Index */
-/* router.get('/', (req, res) => {
-  res.send();
-}); */
 
 /* New */
 router.get('/new', async (req, res) => {
@@ -54,9 +48,9 @@ router.get('/:id/edit', async (req, res) => {
   try {
     const foundActivity = await db.Activity.findById(req.params.id);
     res.render('activities/edit', { activity: foundActivity, habit: req.habitID });
-
   } catch (err) {
-
+    console.log(err);
+    res.send('internal server error');
   }
 });
 
@@ -69,7 +63,6 @@ router.put('/:id', async (req, res) => {
     console.log(err);
     res.send('internal server error');
   }
-
 });
 
 /* Delete */
@@ -86,7 +79,5 @@ router.delete('/:id', async (req, res) => {
     res.send('internal server error');
   }
 });
-
-
 
 module.exports = router;
