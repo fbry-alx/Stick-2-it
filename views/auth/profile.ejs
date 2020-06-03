@@ -22,10 +22,10 @@
   </header>
 
   <div class="profile">
-    <img src="https://thispersondoesnotexist.com/image.jpg" alt="user" width="180" height="180" alt="photo">
+    <img src="https://thispersondoesnotexist.com/image.jpg" alt="user" width="250" height="250" alt="photo">
     <h3><%=user.username%></h3>
     <div class="job">Photographer</div>
-    <i class="fa fa-envelope mail"></i>
+    <i class="fa fa-envelope info"></i>
     <i class="fa fa-facebook info"></i>
     <i class="fa fa-instagram info"></i>
     <i class="fa fa-twitter info"></i>
@@ -35,8 +35,8 @@
     <a href="/habits/new">Add an habit!</a>
     <% } else { %>
     <div class="habits-title">
-      <p><b>Weekly Habits:</b></p>
-      <ul class="habit-subtitle">
+      <p>Weekly Habits:</p>
+      <ul class="habits-subtitle">
         <% user.habits.forEach(habit => { %>
         <li>
           <div>

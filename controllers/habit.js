@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const controllers = require('../controllers/activity');
+const affixHabit = require('../middleware/affixHabit');
 const db = require('../models');
 
 /* New */
@@ -69,6 +71,9 @@ router.delete('/:id', async (req, res) => {
     res.send('internal server error');
   }
 });
+
+/* Activity routes */
+router.use('/:id/activities', affixHabit, controllers);
 
 
 module.exports = router;

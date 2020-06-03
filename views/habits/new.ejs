@@ -9,21 +9,27 @@
 </head>
 
 <body>
-  <h1>Add a new habit</h1>
+
+  <h1>Add New Habit</h1>
   <div class="form">
-    <form action="/habits" method='POST'>
-      <p>
-        <input type="text" name='name' required autocomplete="off">
+    <div class="name-section">
+      <form action="/habits" method='POST'>
+        <p>
+          <input class="input" type="text" name='name' required autocomplete="off">
+          <label for="name" class="labe-name">
+            <span class="content-name">Habit Name</span>
+          </label>
+        </p>
+        </p>
+        <input class="input" type='number' name='frequency' required autocomplete="off">
         <label for="name" class="labe-name">
-          <span class="content-name">Habit Name</span>
+          <span class="content-name">Weekly Frequency</span>
         </label>
-      </p>
-      <p>
-        <input type='number' name='frequency' placeholder="Weekly Freequency" required autocomplete="off">
-      </p>
-      <input type="submit" value="Add Habit">
-    </form>
+        </p>
+        <input class="add-habit-btn" type="submit" value="Add Habit">
+    </div>
   </div>
+  </form>
 </body>
 
 </html>

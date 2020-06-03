@@ -11,8 +11,11 @@
   <h1>Here is my activity</h1>
   <p>I did <%=activity.name%></p>
   <p>I did it for <%=activity.duration%> minutes</p>
-  <p>Here are my notes<%=activity.notes%></p>
-  <a href="/activities/<%=activity._id%>/edit">edit this entry</a>
+  <p>Here are my notes <%=activity.notes%></p>
+  <a href="/habits/<%=habit%>/activities/<%=activity._id%>/edit">edit this entry</a>
+  <form action="/habits/<%=habit%>/activities/<%=activity._id%>?_method=DELETE" method="POST">
+    <input type="submit" value="Delete entry">
+  </form>
 </body>
 
 </html>
