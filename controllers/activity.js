@@ -10,7 +10,13 @@ const db = require('../models');
 
 /* New */
 router.get('/new', async (req, res) => {
-  res.render('activities/new');
+  try {
+    const currentUser = await db.User.findById(req.session.currentUser.id).populate('habits');
+    res.render('activities/new', { habits: currentUser.habits });
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error');
+  }
 });
 
 /* Show */
@@ -26,17 +32,43 @@ router.get('/:id', async (req, res) => {
 
 /* Create */
 router.post('/', async (req, res) => {
-  res.render('/activities');
+  try {
+    const newActivity = await db.Activity.create({
+      name: req.body.name,
+      duration: req.body.duration,
+      notes: req.body.notes,
+    });
+    const habit = await db.Habit.findById(req.body.habit);
+    habit.log.push(newActivity);
+    habit.save();
+    res.redirect(`habits/${req.body.habit}`)
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error')
+  }
 });
 
 /* Edit */
-router.get('/:id/edit', (req, res) => {
-  res.render('activities/edit');
+router.get('/:id/edit', async (req, res) => {
+  try {
+    const foundActivity = await db.Activity.findById(req.params.id);
+    res.render('activities/edit', { activity: foundActivity });
+
+  } catch (err) {
+
+  }
 });
 
 /* Update */
-router.put('/:id', (req, res) => {
-  res.send('/activities/:id');
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedActivity = await db.Activity.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.redirect(`/activities/${req.params.id}`);
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error');
+  }
+
 });
 
 /* Delete */

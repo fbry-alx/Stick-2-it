@@ -10,7 +10,7 @@ router.get('/new', async (req, res) => {
 /* Show */
 router.get('/:id', async (req, res) => {
   try {
-    const foundHabit = await db.Habit.findById(req.params.id);
+    const foundHabit = await db.Habit.findById(req.params.id).populate('log');
     const context = { habit: foundHabit };
     res.render('habits/show', context);
   } catch (err) {
@@ -34,13 +34,25 @@ router.post('/', async (req, res) => {
 });
 
 /* Edit */
-router.get('/:id/edit', (req, res) => {
-
+router.get('/:id/edit', async (req, res) => {
+  try {
+    const currentHabit = await db.Habit.findById(req.params.id);
+    res.render('habits/edit', { habit: currentHabit });
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error')
+  }
 });
 
 /* Update */
-router.put('/:id', (req, res) => {
-
+router.put('/:id', async (req, res) => {
+  try {
+    const updatedHabit = await db.Habit.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.redirect(`/habits/${req.params.id}`);
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error');
+  }
 });
 
 /* Delete */
