@@ -22,10 +22,14 @@
   </header>
 
   <div class="profile">
-    <img src="img/photo1.jpg" alt="user" width="150">
+    <img src="https://thispersondoesnotexist.com/image.jpg" alt="user" width="150" height="150" alt="photo">
     <h3><%=user.username%></h3>
+    <i class="fa fa-facebook info"></i>
+    <i class="fa fa-instagram info"></i>
+    <i class="fa fa-twitter info"></i>
+    <div class="job">Photographer</div>
     <p><i class="fa fa-envelope info"></i><%=user.email%></p>
-    <hr>
+    <hr class="line">
     <% if (!user.habits.length) { %>
     <h3>You aren't tracking any habits yet</h3>
     <% } else { %>
@@ -36,6 +40,7 @@
         <a href="/habits/<%=habit._id%>"><%=habit.name%></a>
       </li>
       <% }) %>
+      <a href="/habits/new">Add an habit!</a>
     </ul>
     <form action="/logout?_method=DELETE" method="POST">
       <input class="log-out-btn" type="submit" value="Log Out">
