@@ -22,25 +22,34 @@
   </header>
 
   <div class="profile">
-    <img src="img/photo1.jpg" alt="user" width="150">
+    <img src="https://thispersondoesnotexist.com/image.jpg" alt="user" width="180" height="180" alt="photo">
     <h3><%=user.username%></h3>
-    <p><i class="fa fa-envelope info"></i><%=user.email%></p>
-    <hr>
+    <div class="job">Photographer</div>
+    <i class="fa fa-envelope mail"></i>
+    <i class="fa fa-facebook info"></i>
+    <i class="fa fa-instagram info"></i>
+    <i class="fa fa-twitter info"></i>
+    <hr class="line">
     <% if (!user.habits.length) { %>
     <h3>You aren't tracking any habits yet</h3>
+    <a href="/habits/new">Add an habit!</a>
     <% } else { %>
-    <p><b>Weekly Habits:</b></p>
-    <ul>
-      <% user.habits.forEach(habit => { %>
-      <li>
-        <a href="/habits/<%=habit._id%>"><%=habit.name%></a>
-      </li>
-      <% }) %>
-    </ul>
+    <div class="habits-title">
+      <p><b>Weekly Habits:</b></p>
+      <ul class="habit-subtitle">
+        <% user.habits.forEach(habit => { %>
+        <li>
+          <div>
+            <a href="/habits/<%=habit._id%>"><%=habit.name%></a>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+    <a href="/habits/new">Add an habit!</a>
     <form action="/logout?_method=DELETE" method="POST">
       <input class="log-out-btn" type="submit" value="Log Out">
     </form>
-
     <%}%>
     <div class="about-par">
       <h5 class="about-title">About</h5>

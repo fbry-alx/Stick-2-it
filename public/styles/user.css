@@ -55,12 +55,11 @@ body {
 }
 
 .profile {
-  background: rgb(239, 239, 239, 0.3);
+  background: rgb(239, 239, 239, 0.5);
   /* background: rgb(0, 31, 60, 0.3); */
   width: 50%;
   height: 60%;
   padding: 2.5rem;
-  /* margin: auto; */
   position: absolute;
   top: 22%;
   left: 25%;
@@ -70,27 +69,20 @@ body {
 }
 
  .profile>img {
-   border-radius: 100px;
-   border: 2px solid #000;
+   border: 2px solid #000 ;
+   border-radius: 50%;
+   /* transition: all 1.5s ease-in-out; */
  }
 
  .info{
   color: #4b4fe2;
-  margin-right: 0.5rem;
+  margin-right: 0.3rem;
 }
 
- /* .habit-bar{
-  background: #bfc9ea;
-  border-radius: 1rem;
+.mail{
+  color: #4b4fe2;
+  margin-right: 0.3rem;
 }
-
-.progress-bar{
-  padding: 0.1em 1rem;
-  border-radius: 1rem;
-  text-align: center;
-  color: #fff;
-  background: #4b4fe2;
-} */
 
 .about-par{
   display: flex; 
@@ -120,3 +112,26 @@ font-size: 1.25rem;
 .log-out-btn:hover {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.line{
+  width: 10rem;
+  border-top: 1px solid #4b4fe2;
+}
+
+.habits-title {
+  display: flex; 
+  flex-direction: column;
+  width: 500px;
+  position: absolute;
+  top: 15rem;
+  left: 20rem;
+  line-height: 2.5rem;
+}
+
+.habits-title {
+  display: inline;
+  text-align: center;
+  font-size: 1.25rem;
+  }
+
+  
