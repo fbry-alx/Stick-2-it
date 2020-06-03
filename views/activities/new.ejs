@@ -9,7 +9,7 @@
 
 <body>
   <h1>Add a new Activity</h1>
-  <form action="/habits/<%=habit%>/activities" method='POST'>
+  <form action="/habits/<%=habit._id%>/activities" method='POST'>
     <h3>Habit: <%=habit.name%></h3>
     <p>Name: <input type="text" name='name' required></p>
     <p>Duration: <input type='number' name='duration' required></p>
