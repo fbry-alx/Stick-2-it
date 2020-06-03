@@ -34,8 +34,8 @@ router.post('/', async (req, res) => {
       notes: req.body.notes,
     });
     const habit = await db.Habit.findById(req.habitID);
-    habit.log.push(newActivity);
-    habit.save();
+    await habit.log.push(newActivity);
+    await habit.save();
     res.redirect(`/habits/${req.habitID}`)
   } catch (err) {
     console.log(err);
@@ -67,12 +67,11 @@ router.put('/:id', async (req, res) => {
 
 /* Delete */
 router.delete('/:id', async (req, res) => {
-  //TODO daltons idea of restful routes going to habit controller
   try {
     const deletedActivity = await db.Activity.findByIdAndDelete(req.params.id);
     const parentHabit = await db.Habit.findById(req.habitID).populate('log');
-    parentHabit.log.remove(deletedActivity);
-    parentHabit.save();
+    await parentHabit.log.remove(deletedActivity);
+    await parentHabit.save();
     res.redirect(`/habits/${req.habitID}`);
   } catch (err) {
     console.log(err);
