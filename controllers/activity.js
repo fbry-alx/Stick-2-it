@@ -72,8 +72,24 @@ router.put('/:id', async (req, res) => {
 });
 
 /* Delete */
-router.delete('/:id', (req, res) => {
-  res.send('/activities');
+router.delete('/:id', async (req, res) => {
+  //TODO daltons idea of restful routes going to habit controller
+  try {
+    const deletedActivity = await db.Activity.findByIdAndDelete(req.params.id);
+    const currentUser = await db.User.findById(req.session.currentUser.id).populate('habits');
+    currentUser.habits.forEach(async habit => {
+      let currentHabit = await db.Habit.findById(habit._id).populate(log);
+      currentHabit.log.forEach(async activity => {
+        if (activity._id === deletedActivity._id) {
+          await currentHabit.log.remove(deletedActivity);
+        }
+      })
+    })
+    res.redirect('/profile');
+  } catch (err) {
+    console.log(err);
+    res.send('internal server error');
+  }
 });
 
 
