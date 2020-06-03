@@ -9,13 +9,10 @@
 
 <body>
   <h1>Add a new Activity</h1>
-  <form action="/activities" method='POST'>
-    <select name="habit">
-      <% habits.forEach(habit => { %>
-      <option value='<%=habit._id%>'><%=habit.name%></option>
-      <% }) %>
-    </select>
-    <p>Activity Title: <input type="text" name='name' required></p>
+
+  <form action="/habits/<%=habit._id%>/activities" method='POST'>
+    <h3>Habit: <%=habit.name%></h3>
+    <p>Name: <input type="text" name='name' required></p>
     <p>Duration: <input type='number' name='duration' required></p>
     <p>Notes: <input type='text' name='notes'></p>
     <input type="submit" value="Add Activity">
