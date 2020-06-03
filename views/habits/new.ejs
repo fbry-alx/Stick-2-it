@@ -10,8 +10,12 @@
 <body>
   <h1>Add a new habit</h1>
   <form action="/habits" method='POST'>
-    <p>Name: <input type="text" name='name' required></p>
-    <p>Frequency: <input type='number' name='frequency' required></p>
+    <p>
+      <input type="text" name='name' placeholder="Habit Name" required autocomplete="off">
+    </p>
+    <p>
+      <input type='number' name='frequency' placeholder="Weekly Freequency" required autocomplete="off">
+    </p>
     <input type="submit" value="Add Habit">
   </form>
 </body>
