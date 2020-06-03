@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 body {
@@ -202,3 +203,5 @@ a {
 .register-form>h2 {
   padding-bottom: 0.5rem;
 }
+
+
