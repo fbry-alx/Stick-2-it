@@ -65,7 +65,7 @@ router.delete('/logout', async (req, res) => {
 /* Profile */
 router.get('/profile', async (req, res) => {
   try {
-    const quoteResponse = await fetch('http://quotes.rest/qod');
+    const quoteResponse = await fetch('http://quotes.rest/qod?api_key=ljXc9ogu4Q_OF_11mTHwlgeF');
     const qod = await quoteResponse.json();
     const qodQuote = qod.contents.quotes[0].quote;
     const qodAuthor = qod.contents.quotes[0].author;
