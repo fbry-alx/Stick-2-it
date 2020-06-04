@@ -11,8 +11,8 @@
 }
 
 body {
-  background: rgb(0, 31, 60,0.65);
-  background: #F8EFEF;
+  background: rgb(0, 31, 60,0.65); 
+  background: #EFECFA;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
@@ -67,7 +67,7 @@ body {
 }
 
  .profile>img {
-   border: 3px solid #F8EFEF ;
+   border: 3px solid #EFECFA ;
    border-radius: 50%;
    position: relative;
    top: -1rem; 

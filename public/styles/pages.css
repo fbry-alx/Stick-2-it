@@ -4,7 +4,7 @@
 
 
 body {
-  background: #F8EFEF;
+  background: #EFECFA;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   color: #001F3C;
@@ -54,7 +54,7 @@ body {
   height: 28rem;
   width: 32rem;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 2px #ccc;;
+  box-shadow: 5px 5px 5px 20px #ccc;;
   position: absolute;
   left: 35%;
 }
@@ -90,8 +90,8 @@ height: 40%;
 }
 
 .add-habit-btn{
-  background-color: #F8EFEF;
-  color: #001F3C;
+  background-color: #001F3C;
+  color: #fff;
   padding: .5rem 1rem;
   border-radius: .5rem;
   font-size: 1.1rem;
