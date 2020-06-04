@@ -26,8 +26,8 @@ router.post('/', async (req, res) => {
   try {
     const currentUser = await db.User.findById(req.session.currentUser.id).populate('habits');
     const newHabit = await db.Habit.create({ name: req.body.name, frequency: req.body.frequency })
-    currentUser.habits.push(newHabit._id);
-    currentUser.save();
+    await currentUser.habits.push(newHabit._id);
+    await currentUser.save();
     res.redirect('/profile');
   } catch (err) {
     console.log(err);
@@ -63,8 +63,7 @@ router.delete('/:id', async (req, res) => {
     const deletedHabit = await db.Habit.findByIdAndDelete(req.params.id);
     const currentUser = await db.User.findById(req.session.currentUser.id);
     await currentUser.habits.remove(deletedHabit);
-    console.log(currentUser.habits);
-    currentUser.save();
+    await currentUser.save();
     res.redirect('/profile');
   } catch (err) {
     console.log(err);

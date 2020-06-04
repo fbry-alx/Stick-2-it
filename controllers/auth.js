@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const fetch = require('node-fetch');
 
 const db = require('../models');
 
@@ -64,9 +65,14 @@ router.delete('/logout', async (req, res) => {
 /* Profile */
 router.get('/profile', async (req, res) => {
   try {
+    const quoteResponse = await fetch('http://quotes.rest/qod');
+    const qod = await quoteResponse.json();
+    const qodQuote = qod.contents.quotes[0].quote;
+    const qodAuthor = qod.contents.quotes[0].author;
     const foundUser = await db.User.findById(req.session.currentUser.id).populate('habits');
-    res.render('auth/profile', { user: foundUser })
-  } catch {
+    res.render('auth/profile', { user: foundUser, quote: qodQuote, author: qodAuthor })
+  } catch (err) {
+    console.log(err);
     res.send({ message: 'Internal Server Error' })
   }
 });
