@@ -10,10 +10,10 @@
 <body>
   <h1>Update Activity</h1>
   <form action="/habits/<%=habit%>/activities/<%=activity._id%>?_method=PUT" method='POST'>
-    <p>Location: <input type="text" name='name' placeholder="<%=activity.name%>" required></p>
-    <p>Duration: <input type='number' name='duration' placeholder="<%=activity.duration%>" required></p>
-    <p>Notes: <input type='text' name='notes' placeholder="<%=activity.notes%>"></p>
-    <input type="submit" value="Add Habit">
+    <p>Location: <input type="text" name='name' value="<%=activity.name%>" required></p>
+    <p>Duration: <input type='number' name='duration' value="<%=activity.duration%>" required></p>
+    <p>Notes: <input type='text' name='notes' value="<%=activity.notes%>"></p>
+    <input type="submit" value="Update">
   </form>
 </body>
 

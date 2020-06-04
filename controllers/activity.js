@@ -18,7 +18,7 @@ router.get('/:id', async (req, res) => {
   try {
     const foundActivity = await db.Activity.findById(req.params.id)
     const parentHabit = await db.Habit.findById(req.habitID);
-    const context = { activity: foundActivity, habit: req.habitID }
+    const context = { activity: foundActivity, habit: parentHabit }
     res.render('activities/show', context);
   } catch (err) {
     res.send('Internal Server Error');

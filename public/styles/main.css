@@ -10,7 +10,7 @@
 }
 
 body {
-  background: url('/img/tying-shoe.jpg') no-repeat center/cover;
+  background: url('/img/yoga-lady.jpg') no-repeat center/cover;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
@@ -58,15 +58,14 @@ body {
   align-items: flex-end;
   text-align: center;
   justify-content: center;
-  height: 90vh;
+  height: 84vh;
 }
 
 .title {
-  font-weight: bolder;
+  font-weight: 700;
   font-size: 3.25rem;
-  margin-bottom: 0.75rem;
   position: relative;
-  right: 20px;
+  right: 60px;
   color: #001F3C;
 }
 
@@ -81,7 +80,7 @@ body {
 
 .join-btn {
  text-decoration: none;
- background-color: #001F3C;
+ background-color: rgba(0, 0, 0, 0.5);
  color: #fff;
  padding: .75rem 1.5rem;
  border-radius: .5rem;
@@ -92,12 +91,12 @@ body {
 }
 
 .join-btn:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Login */
 .sign-in {
-  background: rgba(0,31,60,0.5);
+  background: rgba(0,31,60, 0.7);
   width: 320px;
   height: 420px;
   padding: 2.5rem;
@@ -164,11 +163,11 @@ a {
 }
 
 .reset-forgot>a:hover{
-  color: #85A773;
+  color: #ED7372;
 }
 
 .sign-up-btn:hover {
-  color: #85A773;
+  color: #ED7372;
 }
 
 ::placeholder{
@@ -178,7 +177,7 @@ a {
 
 /* Register */
 .sign-up {
-  background: rgba(0,31,60,0.5);
+  background: rgba(0,31,60,0.7);
   width: 320px;
   height: 420px;
   padding: 2.5rem;
