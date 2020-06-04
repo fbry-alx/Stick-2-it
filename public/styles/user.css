@@ -11,18 +11,20 @@
 }
 
 body {
-  background: url('/img/hand.jpg') no-repeat center/cover;
+  background: rgb(0, 31, 60,0.65); 
+  background: #EFECFA;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
-  color: #000;
   max-width: 1850px;
+  color: #001F3C;
 }
 
 .logo {
   padding: 2rem;
 }
 
+/* Nav bar */
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -39,49 +41,44 @@ body {
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
   border-bottom: 3px transparent solid;
-  color: #001F3C;
-  /* font-weight: 700; */
 }
 
 .main-nav a:hover {
-  border-color: #001f3c;
+  border-color: #001F3C;
 }
 
 .main-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  /* font-weight: bolder; */
+  align-items: center;
 }
 
 .profile {
-  background: rgb(239, 239, 239, 0.5);
-  /* background: rgb(0, 31, 60, 0.3); */
+  background: #fff;
   width: 50%;
   height: 60%;
   padding: 2.5rem;
   position: absolute;
   top: 22%;
   left: 25%;
-  border-radius: 10px;
   line-height: 2.5rem;
-  box-shadow: 0 3px 5px #000;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 2px #ccc;;
 }
 
  .profile>img {
-   border: 2px solid #000 ;
+   border: 3px solid #EFECFA ;
    border-radius: 50%;
+   position: relative;
+   top: -1rem; 
+   left: -1rem; 
+   /* box-shadow: 0 3px 5px #000; */
    /* transition: all 1.5s ease-in-out; */
  }
 
  .info{
-  color: #4b4fe2;
   margin-right: 0.3rem;
-}
-
-.mail{
-  color: #4b4fe2;
-  margin-right: 0.3rem;
+  top: 0;
 }
 
 .about-par{
@@ -89,7 +86,7 @@ body {
   flex-direction: column;
   width: 500px;
   position: absolute;
-  top: 1.5rem;
+  top: 2.5rem;
   left: 20rem;
   line-height: 1.75rem;
 }
@@ -97,6 +94,8 @@ body {
 .about-title {
 text-align: center;
 font-size: 1.25rem;
+text-transform: uppercase;
+font-weight: 300;
 }
 
 .log-out-btn{
@@ -106,6 +105,7 @@ font-size: 1.25rem;
   border-radius: .5rem;
   font-size: .9rem;
   margin: 2rem 0;
+  border: none;
   display: none;
 }
 
@@ -114,24 +114,42 @@ font-size: 1.25rem;
 }
 
 .line{
-  width: 10rem;
-  border-top: 1px solid #4b4fe2;
+  width: 8rem;
+  border-top: 1px solid #efefef;
+}
+
+.line-two{
+  border-top: 1px solid #efefef;
 }
 
 .habits-title {
   display: flex; 
   flex-direction: column;
-  width: 500px;
+  width: 50%;
   position: absolute;
   top: 15rem;
   left: 20rem;
   line-height: 2.5rem;
-}
-
-.habits-title {
-  display: inline;
   text-align: center;
   font-size: 1.25rem;
-  }
+  text-transform: uppercase;
+  font-weight: 300;
+}
 
-  
+ .habits-subtitle {
+ text-transform: lowercase;
+}
+
+.link{
+color: #001F3C;
+}
+
+.grid{
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #efefef;
+  line-height: 2.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
