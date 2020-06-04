@@ -61,18 +61,19 @@ body {
 }
 
 .container>h1{
+  position: absolute;
+  top: 16px;
   font-weight: 200;
 }
 
 .form {
-width: 60%;
+width: 400px;
+height: 200px;
 position: relative;
-height: 40%;
 }
 
 .input {
-  width: 100%;
-  height: 100%;
+  width: 400px;
   padding-top: 10px;
   border: 1px solid #efefef;
   border-radius: 5px;
@@ -82,11 +83,6 @@ height: 40%;
 }
 
 .name-section{
-  position: absolute;
-  bottom: 0px;
-  left: 0%;
-  width: 100%;
-  height: 100%;
   line-height: 2rem;
 }
 
@@ -98,6 +94,7 @@ height: 40%;
   font-size: 1.1rem;
   border: none;
   justify-content: center;
+  margin-top: 16px;
 }
 
 .add-habit-btn:hover{
