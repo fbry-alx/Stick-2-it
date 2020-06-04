@@ -57,7 +57,8 @@ body {
   border-radius: 10px;
   box-shadow: 5px 5px 5px 2px #ccc;;
   position: absolute;
-  left: 35%;
+  top: 60px;
+  left: 440px;
 }
 
 .container>h1{
