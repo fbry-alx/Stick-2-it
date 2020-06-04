@@ -87,7 +87,7 @@ position: relative;
   line-height: 2rem;
 }
 
-.add-habit-btn{
+.btn{
   background-color: #001F3C;
   color: #fff;
   padding: .5rem 1rem;
@@ -98,7 +98,7 @@ position: relative;
   margin-top: 16px;
 }
 
-.add-habit-btn:hover{
+.btn:hover{
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }

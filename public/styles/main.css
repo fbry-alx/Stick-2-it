@@ -21,7 +21,7 @@ body {
   padding: 2rem;
 }
 
-/* Nav bar */
+/* Navbar */
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -198,5 +198,3 @@ a {
 .register-form>h2 {
   padding-bottom: 0.5rem;
 }
-
-

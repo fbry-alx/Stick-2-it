@@ -4,18 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/pages.css">
   <title>Activity</title>
 </head>
 
 <body>
-  <h1>Here is my activity</h1>
-  <p>I did <%=activity.name%></p>
-  <p>I did it for <%=activity.duration%> minutes</p>
-  <p>Here are my notes <%=activity.notes%></p>
-  <a href="/habits/<%=habit%>/activities/<%=activity._id%>/edit">edit this entry</a>
-  <form action="/habits/<%=habit%>/activities/<%=activity._id%>?_method=DELETE" method="POST">
-    <input type="submit" value="Delete entry">
-  </form>
+
+  <header class="main-header">
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Here is my activity</h1>
+    <p>I did <%=activity.name%></p>
+    <p>I did it for <%=activity.duration%> minutes</p>
+    <p>Here are my notes <%=activity.notes%></p>
+    <a href="/habits/<%=habit%>/activities/<%=activity._id%>/edit">edit this entry</a>
+    <form action="/habits/<%=habit%>/activities/<%=activity._id%>?_method=DELETE" method="POST">
+      <input type="submit" value="Delete entry">
+    </form>
+  </div>
 </body>
 
 </html>
