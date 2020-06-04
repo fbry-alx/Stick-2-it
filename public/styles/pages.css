@@ -4,7 +4,7 @@
 
 
 body {
-  background: #EFECFA;
+  background: #E7E7F7;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   color: #001F3C;
@@ -55,7 +55,7 @@ body {
   height: 28rem;
   width: 32rem;
   border-radius: 10px;
-  box-shadow: 5px 5px 5px #ccc;;
+  box-shadow: 0px 7px 15px 0px #8C86FC;;
   position: absolute;
   top: 60px;
   left: 440px;
