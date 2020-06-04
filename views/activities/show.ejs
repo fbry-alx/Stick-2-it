@@ -24,13 +24,18 @@
 
   <div class="container">
     <h1><%=habit.name%></h1>
+    <br>
     <p>Location: <%=activity.name%></p>
     <p>Duration: <%=activity.duration%> minutes</p>
-    <p>Here are my notes: <br> <%=activity.notes%></p>
-    <a href="/habits/<%=habit._id%>/activities/<%=activity._id%>/edit">edit this entry</a>
+    <h4>Here are my notes:</h4>
+    <p><%=activity.notes%></p>
+    <a style="text-decoration: none; color: #001F3C"
+      href="/habits/<%=habit._id%>/activities/<%=activity._id%>/edit">Edit this entry</a>
     <form action="/habits/<%=habit._id%>/activities/<%=activity._id%>?_method=DELETE" method="POST">
-      <input class="btn" type="submit" value="Delete entry">
+      <input class="btn" type="submit" value="Delete Entry">
     </form>
+    <br>
+
   </div>
 </body>
 
