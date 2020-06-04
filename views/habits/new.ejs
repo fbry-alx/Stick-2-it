@@ -9,27 +9,40 @@
 </head>
 
 <body>
+  <header class="main-header">
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <h1>Add New Habit</h1>
-  <div class="form">
-    <div class="name-section">
-      <form action="/habits" method='POST'>
-        <p>
-          <input class="input" type="text" name='name' required autocomplete="off">
+  <div class="container">
+    <h1>New Habit</h1>
+    <div class="form">
+      <div class="name-section">
+        <form action="/habits" method='POST'>
+          <p>
+            <input class="input" type="text" name='name' required autocomplete="off">
+            <label for="name" class="labe-name">
+              <span class="content-name">Habit Name</span>
+            </label>
+          </p>
+          </p>
+          <input class="input" type='number' name='frequency' required autocomplete="off">
           <label for="name" class="labe-name">
-            <span class="content-name">Habit Name</span>
+            <span class="content-name">Weekly Frequency</span>
           </label>
-        </p>
-        </p>
-        <input class="input" type='number' name='frequency' required autocomplete="off">
-        <label for="name" class="labe-name">
-          <span class="content-name">Weekly Frequency</span>
-        </label>
-        </p>
-        <input class="add-habit-btn" type="submit" value="Add Habit">
+          </p>
+          <input class="add-habit-btn" type="submit" value="Add Habit">
+        </form>
+      </div>
     </div>
   </div>
-  </form>
 </body>
 
 </html>

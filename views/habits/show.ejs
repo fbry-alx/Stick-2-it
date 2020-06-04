@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="/styles/pages.css"> -->
   <title>Habit Show</title>
 </head>
 
@@ -14,7 +15,7 @@
   <h3>Here are my entries</h3>
   <a href="/habits/<%=habit._id%>/activities/new">Log an activity</a>
   <% if (!habit.log.length) { %>
-  <p>No recorded habits yet, get out there!</p>
+  <p>No recorded activities yet, get out there!</p>
   <% } %>
   <% habit.log.forEach(activity => { %>
   <h4><a href="/habits/<%=habit._id%>/activities/<%=activity._id%>"><%=activity.name%></a></h4>

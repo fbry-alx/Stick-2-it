@@ -11,17 +11,20 @@
 }
 
 body {
-  background: url('/img/gradient.jpg') no-repeat center/cover;
+  background: rgb(0, 31, 60,0.65);
+  background: #efefef;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   max-width: 1850px;
+  color: #001F3C;
 }
 
 .logo {
   padding: 2rem;
 }
 
+/* Nav bar */
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -38,48 +41,44 @@ body {
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
   border-bottom: 3px transparent solid;
-  color: #001F3C;
-  /* font-weight: 700; */
 }
 
 .main-nav a:hover {
-  border-color: #001f3c;
+  border-color: #001F3C;
 }
 
 .main-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  /* font-weight: bolder; */
+  align-items: center;
 }
 
 .profile {
-  background: rgba(239, 239, 239, 0.7);
-  /* background: rgb(0, 31, 60, 0.3); */
+  background: #bad7c5;
   width: 50%;
   height: 60%;
   padding: 2.5rem;
   position: absolute;
   top: 22%;
   left: 25%;
-  border-radius: 10px;
   line-height: 2.5rem;
+  border-radius: 10px;
   box-shadow: 0 3px 5px #000;
 }
 
  .profile>img {
-   /* border: 2px solid #000 ; */
-   border-radius: 12px;
+   border: 3px solid #fff ;
+   border-radius: 50%;
    position: relative;
-   top: -5rem;
-   left: -5rem;
-   box-shadow: 0 3px 5px #000;
+   top: -1rem; 
+   left: -1rem; 
+   /* box-shadow: 0 3px 5px #000; */
    /* transition: all 1.5s ease-in-out; */
  }
 
  .info{
-  color: #4b4fe2;
   margin-right: 0.3rem;
+  top: 0;
 }
 
 .about-par{
@@ -87,7 +86,7 @@ body {
   flex-direction: column;
   width: 500px;
   position: absolute;
-  top: 1.5rem;
+  top: 2.5rem;
   left: 20rem;
   line-height: 1.75rem;
 }
@@ -116,15 +115,19 @@ font-weight: 300;
 
 .line{
   width: 8rem;
-  border-top: 1px solid #999;
+  border-top: 1px solid #fff;
+}
+
+.line-two{
+  border-top: 1px solid #fff;
 }
 
 .habits-title {
-  display: inline; 
+  display: flex; 
   flex-direction: column;
-  width: 500px;
+  width: 50%;
   position: absolute;
-  top: 14.5rem;
+  top: 15rem;
   left: 20rem;
   line-height: 2.5rem;
   text-align: center;
@@ -137,3 +140,6 @@ font-weight: 300;
  text-transform: lowercase;
 }
 
+.link{
+color: #001F3C;
+}
