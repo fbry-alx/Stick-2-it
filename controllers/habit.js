@@ -75,5 +75,4 @@ router.delete('/:id', async (req, res) => {
 /* Activity routes */
 router.use('/:id/activities', affixHabit, controllers);
 
-
 module.exports = router;
