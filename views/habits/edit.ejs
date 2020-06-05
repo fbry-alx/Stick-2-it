@@ -22,22 +22,24 @@
   </header>
 
   <div class="container">
+    <h1>Edit habit Info</h1>
     <form action="/habits/<%=habit._id%>?_method=PUT" method='POST'>
       <p>
         <input class="input" type="text" name='name' value="<%=habit.name%>" required autocomplete="off">
         <label for="name" class="labe-name">
+          <br>
           <span class="content-name">Name</span>
         </label>
       </p>
       <p>
-        <input class="input" type="text" name='frequency' value="<%=habit.frequecy%>" required autocomplete="off">
+        <input class="input" type="number" name='frequency' value="<%=habit.frequency%>" required autocomplete="off">
         <label for="name" class="labe-name">
+          <br>
           <span class="content-name">Frequency</span>
         </label>
       </p>
-      <input class="btn" type="submit" value="Update Habit">
+      <input class="btn" type="submit" value="Update">
     </form>
-    <h1>Edit habit info</h1>
   </div>
 </body>
 
