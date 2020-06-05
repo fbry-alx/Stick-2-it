@@ -4,18 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/pages.css">
   <title>New Activity</title>
 </head>
 
 <body>
-  <h1>Add a new Activity</h1>
-  <form action="/habits/<%=habit._id%>/activities" method='POST'>
-    <h3>Habit: <%=habit.name%></h3>
-    <p>Location: <input type="text" name='name' required></p>
-    <p>Duration: <input type='number' name='duration' required></p>
-    <p>Notes: <input type='text' name='notes'></p>
-    <input type="submit" value="Add Activity">
-  </form>
+
+  <header class="main-header">
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div style="padding-bottom: 2.5rem;" class="container">
+    <h1>Add a new Activity</h1>
+    <div class="form">
+      <div class="name-section">
+        <form action="/habits/<%=habit._id%>/activities" method='POST'>
+          <p>
+            <input class="input" type="text" name='name' required autocomplete="off">
+            <label for="name" class="labe-name">
+              <span class="content-name">Location</span>
+            </label>
+          </p>
+          <p>
+            <input class="input" type="number" name='duration' required autocomplete="off">
+            <label for="name" class="labe-name">
+              <span class="content-name">Duration</span>
+            </label>
+          </p>
+          <p>
+            <input class="input" type="text" name='notes' autocomplete="off">
+            <label for="name" class="labe-name">
+              <span class="content-name">Notes</span>
+            </label>
+          </p>
+          <input class="btn" type="submit" value="Add Activity">
+        </form>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

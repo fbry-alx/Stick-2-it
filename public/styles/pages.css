@@ -75,19 +75,20 @@ position: relative;
 
 .input {
   width: 400px;
-  padding-top: 10px;
+  padding-top: 12px;
   border: 1px solid #efefef;
   border-radius: 5px;
   outline: none;
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  color: #8C86FC;
 }
 
 .name-section{
   line-height: 2rem;
 }
 
-.add-habit-btn{
+.btn{
   background-color: #001F3C;
   color: #fff;
   padding: .5rem 1rem;
@@ -98,7 +99,7 @@ position: relative;
   margin-top: 16px;
 }
 
-.add-habit-btn:hover{
+.btn:hover{
   background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
 }

@@ -4,26 +4,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="/styles/pages.css"> -->
-  <title>Habit Show</title>
+  <link rel="stylesheet" href="/styles/pages.css">
+  <title>Habit Details</title>
 </head>
 
 <body>
-  <h1>Here is one of my habits!</h1>
-  <p>I am working on <%=habit.name%></p>
-  <p>I am doing it <%=habit.frequency%> times per week</p>
-  <h3>Here are my entries</h3>
-  <a href="/habits/<%=habit._id%>/activities/new">Log an activity</a>
-  <% if (!habit.log.length) { %>
-  <p>No recorded activities yet, get out there!</p>
-  <% } %>
-  <% habit.log.forEach(activity => { %>
-  <h4><a href="/habits/<%=habit._id%>/activities/<%=activity._id%>"><%=activity.name%></a></h4>
-  <% }) %>
-  <form action="/habits/<%=habit._id%>?_method=DELETE" method="POST">
-    <input type="submit" value="Delete Habit">
-  </form>
+  <header class="main-header">
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <div class="container">
+    <h1><%=habit.name%></h1>
+    <p><%=habit.frequency%> times per week</p>
+    <h4>Here are my entries:</h4>
+    <% if (!habit.log.length) { %>
+    <p>No recorded activities yet, get out there!</p>
+    <% } %>
+    <% habit.log.forEach(activity => { %>
+    <a style="text-decoration: none; color: #001F3C"
+      href="/habits/<%=habit._id%>/activities/<%=activity._id%>"><%=activity.name%></a>
+    <% }) %>
+    <br>
+    <a style="text-decoration: none; color: #001F3C" href="/habits/<%=habit._id%>/activities/new">Log an activity</a>
+    <br>
+    <a style="text-decoration: none; color: #001F3C" href="/habits/<%=habit._id%>/edit">Edit Habit</a>
+    <br>
+    <form action="/habits/<%=habit._id%>?_method=DELETE" method="POST">
+      <input class="btn" type="submit" value="Delete Habit">
+    </form>
+  </div>
 </body>
 
 </html>
