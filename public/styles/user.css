@@ -11,8 +11,16 @@
   font-size: 16px;
 }
 
+:root{
+  --light: #E7E7F7;
+  --lavender: #8C86FC;
+  --blue: #001F3C;
+  --white: #fff;
+  --grey: #efefef;
+}
+
 body {
-  background: #E7E7F7;
+  background: var(--light);
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
@@ -44,7 +52,7 @@ body {
 }
 
 .main-nav a:hover {
-  border-color: #001F3C;
+  border-color: var(--blue);
 }
 
 .main-header {
@@ -54,7 +62,7 @@ body {
 }
 
 .profile {
-  background: #fff;
+  background: var(--white);
   width: 1000px;
   height: 550px;
   overflow: hidden;
@@ -64,11 +72,11 @@ body {
   left: 220px;
   line-height: 2.5rem;
   border-radius: 10px;
-  box-shadow: 0px 7px 15px 0px #8C86FC;;
+  box-shadow: 0px 7px 15px 0px var(--lavender);;
 }
 
  .profile>img {
-   border: 3px solid #E7E7F7 ;
+   border: 3px solid var(--light) ;
    border-radius: 50%;
    position: relative;
    top: -1rem; 
@@ -99,8 +107,8 @@ font-weight: 300;
 }
 
 .log-out-btn{
-  background-color: #001F3C;
-  color: #fff;
+  background-color: var(--lavender);
+  color: var(--white);
   padding: .75rem 1.5rem;
   border-radius: .5rem;
   font-size: .9rem;
@@ -115,11 +123,11 @@ font-weight: 300;
 
 .line{
   width: 8rem;
-  border-top: 1px solid #efefef;
+  border-top: 1px solid var(--grey);
 }
 
 .line-two{
-  border-top: 1px solid #efefef;
+  border-top: 1px solid var(--grey);
 }
 
 .habits-title {
@@ -140,14 +148,14 @@ font-weight: 300;
 }
 
 .link{
-color: #001F3C;
+color: var(--blue);
 }
 
 .grid{
-  background-color: #fff;
+  background-color:var(--white);
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid var(--grey);
   line-height: 2.5rem;
   border-radius: 5px;
   margin-bottom: 0.5rem;

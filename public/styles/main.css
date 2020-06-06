@@ -9,12 +9,20 @@
   list-style: none;
 }
 
+:root{
+  --light: #E7E7F7;
+  --lavender: #8C86FC;
+  --blue: #001F3C;
+  --white: #fff;
+  --orange: #ED7372;
+}
+
 body {
   background: url('/img/yoga-lady.jpg') no-repeat center/cover;
   height: 100vh;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .logo {
@@ -38,11 +46,11 @@ body {
   padding-bottom: 0.5rem;
   transition: border-color 0.5s;
   border-bottom: 3px transparent solid;
-  color: #001F3C;
+  color: var(--blue);
 }
 
 .main-nav a:hover {
-  border-color: #001F3C;
+  border-color: var(--blue);
 }
 
 .main-header {
@@ -66,7 +74,7 @@ body {
   font-size: 3.25rem;
   position: relative;
   right: 60px;
-  color: #001F3C;
+  color: var(--blue);
 }
 
 .subtitle {
@@ -75,13 +83,13 @@ body {
   width: 450px;
   position: relative;
   right: 8rem;
-  color: #fff;
+  color: var(--white);
 }
 
 .join-btn {
  text-decoration: none;
  background-color: rgba(0, 0, 0, 0.5);
- color: #fff;
+ color: var(--white);
  padding: .75rem 1.5rem;
  border-radius: .5rem;
  font-size: .9rem;
@@ -122,22 +130,22 @@ input[type=email] {
   background: transparent;
   text-align: center;
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--white);
   width: 240px;
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   padding: 10px 0;
   transition: border 0.5s;
   outline: none;
-  color: #fff;
+  color: var(--white);
   line-height: 1.7rem;
 }
 
 input[type=submit] {
   border: none;
   width: 190px;
-  background: #fff;
-  color: #001f3c;
+  background: var(--white);
+  color: var(--blue);
   font-size: 1rem;
   line-height: 1.5rem;
   padding: 10px 0;
@@ -147,12 +155,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  color: #fff;
+  color: var(--white);
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 a {
-  color: #fff;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -163,11 +171,11 @@ a {
 }
 
 .reset-forgot>a:hover{
-  color: #ED7372;
+  color: var(--orange);
 }
 
 .sign-up-btn:hover {
-  color: #ED7372;
+  color: var(--orange);
 }
 
 ::placeholder{
