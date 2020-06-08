@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/pages.css">
+  <title>Activity</title>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <a href="/" class="logo">
+      <img src="/img/logo.png" alt="logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1><%=habit.name%></h1>
+    <br>
+    <p>Location: <%=activity.name%></p>
+    <p>Duration: <%=activity.duration%> minutes</p>
+    <h4>Here are my notes:</h4>
+    <p><%=activity.notes%></p>
+    <a style="text-decoration: none; color: #001F3C"
+      href="/habits/<%=habit._id%>/activities/<%=activity._id%>/edit">Edit this entry</a>
+    <form action="/habits/<%=habit._id%>/activities/<%=activity._id%>?_method=DELETE" method="POST">
+      <input class="btn" type="submit" value="Delete Entry">
+    </form>
+    <br>
+
+  </div>
+</body>
+
+</html>

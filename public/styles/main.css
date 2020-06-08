@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:root{
+  --light: #E7E7F7;
+  --lavender: #8C86FC;
+  --blue: #001F3C;
+  --white: #fff;
+  --orange: #ED7372;
+}
+
+body {
+  background: url('/img/yoga-lady.jpg') no-repeat center/cover;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  color: var(--white);
+}
+
+.logo {
+  padding: 2rem;
+}
+
+/* Navbar */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  padding: 1rem 2rem; 
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+  border-bottom: 3px transparent solid;
+  color: var(--blue);
+}
+
+.main-nav a:hover {
+  border-color: var(--blue);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* home main section */
+.home-main{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+  height: 84vh;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 3.25rem;
+  position: relative;
+  right: 60px;
+  color: var(--blue);
+}
+
+.subtitle {
+  display: inline-block;
+  font-size: 1.25rem;
+  width: 450px;
+  position: relative;
+  right: 8rem;
+  color: var(--white);
+}
+
+.join-btn {
+ text-decoration: none;
+ background-color: rgba(0, 0, 0, 0.5);
+ color: var(--white);
+ padding: .75rem 1.5rem;
+ border-radius: .5rem;
+ font-size: .9rem;
+ position: relative;
+ top: 1.5rem;
+ right: 18rem;
+}
+
+.join-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Login */
+.sign-in {
+  background: rgba(0,31,60, 0.7);
+  width: 320px;
+  height: 420px;
+  padding: 2.5rem;
+  margin: auto;
+  position: relative;
+  left: 28%;
+  top: 15%;
+  border-radius: 10px;
+}
+
+.login-form {
+  width: 240px;
+  text-align: center;
+}
+
+.login-form>h2 {
+  padding-bottom: 0.5rem;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  background: transparent;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid var(--white);
+  width: 240px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  padding: 10px 0;
+  transition: border 0.5s;
+  outline: none;
+  color: var(--white);
+  line-height: 1.7rem;
+}
+
+input[type=submit] {
+  border: none;
+  width: 190px;
+  background: var(--white);
+  color: var(--blue);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 10px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+input[type=submit]:hover {
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.reset-forgot{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.reset-forgot>a:hover{
+  color: var(--orange);
+}
+
+.sign-up-btn:hover {
+  color: var(--orange);
+}
+
+::placeholder{
+  color: aliceblue;
+  opacity: 0.8;
+} 
+
+/* Register */
+.sign-up {
+  background: rgba(0,31,60,0.7);
+  width: 320px;
+  height: 420px;
+  padding: 2.5rem;
+  margin: auto;
+  position: relative;
+  left: 28%;
+  top: 15%;
+  border-radius: 10px;
+}
+
+
+.register-form {
+  width: 240px;
+  text-align: center;
+}
+
+.register-form>h2 {
+  padding-bottom: 0.5rem;
+}
+
+
+footer{
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,31,60, 0.5);
+  color: var(--white);
+  padding: 0.75rem;
+  text-align: center;
+  width: 100%;
+  height: 3rem;
+}

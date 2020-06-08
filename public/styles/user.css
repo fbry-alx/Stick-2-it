@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+:root{
+  --light: #E7E7F7;
+  --lavender: #8C86FC;
+  --blue: #001F3C;
+  --white: #fff;
+  --grey: #efefef;
+}
+
+body {
+  background: var(--light);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  max-width: 1850px;
+  color: #001F3C;
+}
+
+.logo {
+  padding: 2rem;
+}
+
+/* Nav bar */
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  padding: 1rem 2rem; 
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  transition: border-color 0.5s;
+  border-bottom: 3px transparent solid;
+}
+
+.main-nav a:hover {
+  border-color: var(--blue);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  background: var(--white);
+  width: 1000px;
+  height: 550px;
+  overflow: hidden;
+  padding: 2.5rem;
+  position: absolute;
+  top: 135px;
+  left: 220px;
+  line-height: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 7px 15px 0px var(--lavender);;
+}
+
+ .profile>img {
+   border: 3px solid var(--light) ;
+   border-radius: 50%;
+   position: relative;
+   top: -1rem; 
+   left: -1rem; 
+   /* transition: all 1.5s ease-in-out; */
+ }
+
+ .info{
+  margin-right: 0.3rem;
+  top: 0;
+}
+
+.about-par{
+  display: flex; 
+  flex-direction: column;
+  width: 500px;
+  position: absolute;
+  top: 2.5rem;
+  left: 20rem;
+  line-height: 1.75rem;
+}
+
+.about-title {
+text-align: center;
+font-size: 1.25rem;
+text-transform: uppercase;
+font-weight: 300;
+}
+
+.log-out-btn{
+  background-color: var(--lavender);
+  color: var(--white);
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  font-size: .9rem;
+  margin: 2rem 0;
+  border: none;
+  display: none;
+}
+
+.log-out-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.line{
+  width: 8rem;
+  border-top: 1px solid var(--grey);
+}
+
+.line-two{
+  border-top: 1px solid var(--grey);
+}
+
+.habits-title {
+  display: flex; 
+  flex-direction: column;
+  width: 50%;
+  position: absolute;
+  top: 15rem;
+  left: 20rem;
+  line-height: 2.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+ .habits-subtitle {
+ text-transform: lowercase;
+}
+
+.link{
+color: var(--blue);
+}
+
+.grid{
+  background-color:var(--white);
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid var(--grey);
+  line-height: 2.5rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+

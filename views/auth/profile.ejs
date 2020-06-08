@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/user.css">
+  <title>User Profile</title>
+</head>
+
+<body>
+  <header class="main-header">
+    <a href="/" class="logo">
+      <img src="img/logo.png" alt="logo">
+    </a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Log Out</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="profile">
+    <img src="https://thispersondoesnotexist.com/image.jpg" alt="user" width="200" height="200" alt="photo">
+    <h3 style="font-size: 30px; width: 150px;"><%=user.username%></h3>
+    <i class="fa fa-envelope info"></i>
+    <i class="fa fa-facebook info"></i>
+    <i class="fa fa-instagram info"></i>
+    <i class="fa fa-twitter info"></i>
+    <hr class="line">
+    <% if (!user.habits.length) { %>
+    <h3>You aren't tracking any habits yet</h3>
+    <a class="link" href="/habits/new">CREATE HABIT</a>
+    <% } else { %>
+    <div class="habits-title">
+      <p>WEEKLY HABITS:</p>
+      <ul class="habits-subtitle">
+        <% user.habits.forEach(habit => { %>
+        <li>
+          <div class="grid">
+            <a class="link" href="/habits/<%=habit._id%>"><%=habit.name%></a>
+          </div>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+    <a class="link" href="/habits/new">CREATE HABIT</a>
+    <form action="/logout?_method=DELETE" method="POST">
+      <input class="log-out-btn" type="submit" value="Log Out">
+    </form>
+    <%}%>
+    <div class="about-par">
+      <h5 class="about-title">DAILY QUOTE</h5>
+      <p><%=quote%></p>
+    <hr class="line-two">
+  </div>
+  </div>
+
+</body>
+
+</html>
