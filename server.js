@@ -18,7 +18,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(session({
   store: new MongoStore({
-    url: "mongodb://localhost:27017/habit",
+    url: process.env.MONGODB_URI || "mongodb://localhost:27017/habit",
   }),
   secret: "Gucci",
   resave: false,
